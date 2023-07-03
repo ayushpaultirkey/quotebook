@@ -8,7 +8,7 @@ function Random(request, response) {
     //const connection = mysql.createConnection(process.env.DATABASE_URL);
     //console.log("HELLO")
     
-    response.send({ ... _response, message: "Unable to connect to database" });
+    response.send({ ... _response, message: process.env.DATABASE_URL });
     
     /*connection.connect((error) => {
 
