@@ -6,6 +6,7 @@ function Random(request, response) {
     const _response = { message: "", success: false, data: [] };
     
     const connection = mysql.createConnection(process.env.DATABASE_URL);
+    console.log("HELLO")
     
     connection.connect((error) => {
 
