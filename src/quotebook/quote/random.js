@@ -5,12 +5,9 @@ function Random(request, response) {
 
     const _response = { message: "", success: false, data: [] };
     
-    //const connection = mysql.createConnection(process.env.DATABASE_URL);
-    //console.log("HELLO")
+    const connection = mysql.createConnection(process.env.DATABASE_URL);
     
-    response.send({ ... _response, message: process.env.DATABASE_URL });
-    
-    /*connection.connect((error) => {
+    connection.connect((error) => {
 
         if(error) {
             response.send({ ... _response, message: "Unable to connect to database" });
@@ -30,7 +27,7 @@ function Random(request, response) {
 
         };
 
-    });*/
+    });
 
 };
 

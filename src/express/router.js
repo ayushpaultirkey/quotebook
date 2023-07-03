@@ -10,7 +10,7 @@ router.use("/quote/random", Random);
 
 router.use("/public", Serve(path.join(__dirname, "./../../public")).Express);
 router.use("/@h12", express.static(path.join(__dirname, "./../../public/library/h12")));
-
+/*
 router.use("/@hotreload", function(req, res) {
 
     res.setHeader("Cache-Control", "no-cache");
@@ -27,6 +27,6 @@ router.use("/@hotreload", function(req, res) {
     });
 
 });
-
+*/
 
 module.exports = router;
