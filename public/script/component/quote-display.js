@@ -26,9 +26,9 @@ class QuoteDisplay extends H12.Component {
 
                 <div class="h-full flex justify-center items-center p-10 pb-0">
                     <div class="{q-visible}">
-                        <label id="block">{q-content}</label>
+                        <label>{q-content}</label>
                         <div class="text-sm font-bold">
-                            <label id="author">by @{q-author}</label>
+                            <label>by @{q-author}</label>
                         </div>
                     </div>
                     <div class="{q-loading}">
@@ -38,9 +38,9 @@ class QuoteDisplay extends H12.Component {
 
                 <div class="p-10 pt-0 select-none">
                     <div class="text-center space-x-2">
-                        <button onclick="{q-create-visible}" class="fa fa-plus w-10 h-10 hover:text-blue-500 active:text-blue-600 transition-colors"></button>
-                        <button onclick="{q-random}" class="fa fa-dice w-10 h-10 hover:text-blue-500 active:text-blue-600 transition-colors"></button>
-                        <button onclick="{q-copy}" class="fa fa-copy w-10 h-10 hover:text-blue-500 active:text-blue-600 transition-colors"></button>
+                        <button onclick="{q-create-visible}" title="Create" class="fa fa-plus w-10 h-10 hover:text-blue-500 active:text-blue-600 transition-colors"></button>
+                        <button onclick="{q-random}" title="Random" class="fa fa-dice w-10 h-10 hover:text-blue-500 active:text-blue-600 transition-colors"></button>
+                        <button onclick="{q-copy}" title="Copy" class="fa fa-copy w-10 h-10 hover:text-blue-500 active:text-blue-600 transition-colors"></button>
                     </div>
                 </div>
 
