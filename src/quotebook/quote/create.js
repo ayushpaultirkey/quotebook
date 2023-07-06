@@ -9,7 +9,7 @@ function Create(request, response) {
     let _author = request.query.author;
     let _date = new Date();
     
-    if(typeof(_content) !== "undefined" && typeof(_author) !== "undefined") {
+    if(typeof(_content) !== "undefined" && typeof(_author) !== "undefined" && _content.length < 450) {
 
         const connection = mysql.createConnection(process.env.DATABASE_URL);
     

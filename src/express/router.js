@@ -8,6 +8,10 @@ const { Create, Random } = require("./../quotebook/quote");
 router.use("/quote/create", Create);
 router.use("/quote/random", Random);
 
+router.use("/home", (request, response) => {
+    response.sendFile(path.join(__dirname, "./../../public/view/index.html"));
+});
+
 router.use("/public", Serve(path.join(__dirname, "./../../public"), { hotreload: false }).Express);
 router.use("/@h12", express.static(path.join(__dirname, "./../../public/library/h12")));
 /*
